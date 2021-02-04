@@ -20,7 +20,6 @@ func breakingRecords(scores []int32) []int32 {
 			highest = scores[i]
 			highCount++
 		}
-
 		if scores[i] < lowest {
 			lowest = scores[i]
 			lowCount++
@@ -28,7 +27,6 @@ func breakingRecords(scores []int32) []int32 {
 	}
 	return []int32{highCount, lowCount}
 }
-
 func main() {
 	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
 
