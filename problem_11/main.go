@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"io"
+	"math"
 	"os"
 	"strconv"
 	"strings"
@@ -20,14 +21,13 @@ func diagonalDifference(arr [][]int32) int32 {
 	// Write your code here
 	var LeftDiagonal, RightDiagonal int32
 	for i := 0; i < len(arr); i++ {
-		LeftDiagonal = LeftDiagonal + arr[i][i]
+		LeftDiagonal += arr[i][i]
 
 		RightDiagonal += arr[(len(arr) - i - 1)][i]
 	}
-	return RightDiagonal - LeftDiagonal
 
-	// for i := 0; i < len(arr); i <
-
+	Difference := math.Abs(float64(RightDiagonal) - float64(LeftDiagonal))
+	return int32(Difference)
 }
 
 func main() {

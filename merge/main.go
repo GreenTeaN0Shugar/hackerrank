@@ -21,6 +21,6 @@ func mergeSortRecursive(s, result []int, left, right int) {
 	merge()
 }
 
-func merge() {
+func merge(s, result, leftBegin, rightBegin, rightEnd): {
 	fmt.Println("MERGE NOT IMPLEMENTED")
 }
